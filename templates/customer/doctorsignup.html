@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <style>
+
+        form{
+           margin: 50px; 
+        }
+
+    </style>
+  </head>
+  <body>
+    <!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <style type="text/css">
+    .bs-example {
+      margin: 0px;
+
+    }
+    .bg-dark {
+    background-color: #212529!important;
+}
+    .navbar-brand {
+      font-size: 20px;
+      font-family: monospace;
+      
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+  <div class="bs-example">
+    <nav class="navbar navbar-expand-md  navbar-dark fixed-top" style="background-color: #000000;">
+    <a style="color: #ffffff;text-decoration: none; " href="/"><font size =" 4">Medical Chatbot System</font><br /></a>  
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+        <div class="navbar-nav">
+          <p style="
+          padding-left: 15px;
+      "  class="nav-item nav-link active"></p>
+
+          
+
+
+        </div>
+
+        <div class="navbar-nav">
+          <a href="/customer/customersignup" class="nav-item nav-link">Register</a>
+          
+          <a href="/adminlogin" class="nav-item nav-link">Login</a>
+          <a href="/aboutus" class="nav-item nav-link">About Us</a>
+          
+        </div>
+
+
+
+
+      </div>
+    </nav>
+  </div>
+
+
+</body>
+
+</html>
+
+ 
+
+
+<br><br><br>
+<h3 style="text-align: center;color: red;">DOCTOR REGISTRATION</h3>
+<form method="POST" autocomplete="off" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class = "col-8" style="margin: auto;">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="first_name">First Name</label>
+          <input type="text" name="first_name" maxlength="30" autocomplete="off" placeholder="First Name" class="form-control" required="true" id="id_first_name">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="last_name">Last Name</label>
+          <input type="text" name="last_name" maxlength="150" autocomplete="off" placeholder="Last Name" class="form-control" required="true" id="id_last_name">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="mobile">Contact</label>
+          <input type="text" name="mobile" maxlength="20" autocomplete="off" placeholder="Contact" class="form-control" required id="id_mobile">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="address">Clinic Address</label>
+          <input type="text" name="address" maxlength="40" autocomplete="off" placeholder="Address" class="form-control" required id="id_address">
+        </div>
+
+        <div class="form-group col-md-6">
+          <label for="address">Specialization</label>
+          <input type="text" name="Specialization" maxlength="40" autocomplete="off" placeholder="Address" class="form-control" required id="id_address">
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Sign Up</button>
+    </div>
+  </form>
+
+
+<br><br>
+
+  </body>
+</html>

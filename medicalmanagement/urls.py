@@ -17,6 +17,7 @@ urlpatterns = [
     path('afterlogin', views.afterlogin_view,name='afterlogin'),
    
     path('adminlogin', LoginView.as_view(template_name='medical/adminlogin.html'),name='adminlogin'),
+    path('bmi/', include("bmi.urls")),
 
 
 ]

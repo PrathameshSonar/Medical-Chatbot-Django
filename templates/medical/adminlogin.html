@@ -1,8 +1,11 @@
+
+
 <!DOCTYPE html>
-{% load widget_tweaks %}
+
 <html lang="en" dir="ltr">
 
 <head>
+  
   <meta charset="utf-8">
   <title>Login</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -50,12 +53,91 @@
 
       
     }
+
+    .form-control{
+      width:50%
+    }
   </style>
 
 </head>
 
 <body>
-  {% include "medical/navbar.html" %}
+  <!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <style type="text/css">
+    .bs-example {
+      margin: 0px;
+
+    }
+    .bg-dark {
+    background-color: #212529!important;
+}
+    .navbar-brand {
+      font-size: 20px;
+      font-family: monospace;
+      
+    }
+
+    .form-control{
+      width:50%
+    }
+
+    .bttn{
+      width: 50%;
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+  <div class="bs-example">
+    <nav class="navbar navbar-expand-md  navbar-dark fixed-top" style="background-color: #000000;">
+    <a style="color: #ffffff;text-decoration: none; " href="/"><font size =" 4">Medical Chatbot System</font><br /></a>  
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+        <div class="navbar-nav">
+          <p style="
+          padding-left: 15px;
+      "  class="nav-item nav-link active"></p>
+
+          
+
+
+        </div>
+
+        <div class="navbar-nav">
+          <a href="/customer/customersignup" class="nav-item nav-link">Register</a>
+          <a href="/adminlogin" class="nav-item nav-link">Login</a>
+          <a href="/customer/doctor_signup" class="nav-item nav-link">Doctor Register</a>
+          <a href="/aboutus" class="nav-item nav-link">About Us</a>
+          
+        </div>
+
+
+
+
+      </div>
+    </nav>
+  </div>
+
+
+
+
 
   <br><br>
   <br>
@@ -64,12 +146,12 @@
   <div class="log-form">
     <h2 class="text-center">Login to <span style = "color: slateblue;">Medical Chatbot</span></h2><br>
     <form method="post">
-      {% csrf_token %}
-      {% render_field form.username class="form-control" placeholder="Username" autocomplete="off" %}
+      <input type="hidden" name="csrfmiddlewaretoken" value="ddIjVKRMZzgQMJ05u5PpHXcVvH3C819uEetUCnGxnWkJNSHIHhpCZny79CMFaqIt">
+      <input type="text" name="username" autofocus autocapitalize="none" autocomplete="off" maxlength="150" placeholder="Username" class="form-control" required id="id_username">
       <br>
-      {% render_field form.password class="form-control" placeholder="Password" %}
+      <input type="password" name="password" autocomplete="current-password" placeholder="Password" class="form-control" required id="id_password">
       <br>
-      <button type="submit" >Login</b<br>utton>
+      <button type="submit" class="bttn">Login<br></button>
 
     </form>
   </div>
@@ -77,7 +159,7 @@
 
 
 
-  {% include "medical/footer.html" %}
+  
 </body>
 
 </html>

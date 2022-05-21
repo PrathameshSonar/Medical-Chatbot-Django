@@ -13,6 +13,9 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
   <style type="text/css">
+    .card-text{
+      color:rgb(7, 7, 7);
+    }
     a:link {
       text-decoration: none;
     }
@@ -82,7 +85,7 @@
         <hr>
 
         <div class="card-text col-12">
-          <p class="text-muted mb-0 col-4" style="font-size: 32px">Username:</p>
+          <p class="text-muted mb-0 col-4" style="color:aqua;font-size: 32px;">Username:</p>
           <p style="font-size: 30px" class="col-4">{{ user.username }}</p>
           <p class="text-muted mb-0 col-4" style="font-size: 32px">Name:</p>
           <p style="font-size: 30px" class="col-4">{{ user.first_name }} {{ user.last_name }}</p>

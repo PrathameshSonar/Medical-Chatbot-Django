@@ -1,165 +1,241 @@
-
-
 <!DOCTYPE html>
+{% load widget_tweaks %}
+{% load static %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Customer Login</title>
+    <style>
+        
+/*---------------------------------------*/
+/* Font */
+/*---------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
-<html lang="en" dir="ltr">
 
-<head>
-  
-  <meta charset="utf-8">
-  <title>Login</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    form {
-      border: 3px solid #f1f1f1;
-      margin: auto;
-      padding: 100px;
-    }
-    h2{
-      align-items: center;
-    }
-
-  
-    button {
-      background-color: #04AA6D;
-      color: white;
-      padding: 14px 20px;
-      margin: 8px 0;
-      border: none;
-      cursor: pointer;
-      width: 100%;
-    }
-
-    button:hover {
-      opacity: 0.8;
-    }
-
-    
-    span.psw {
-      float: right;
-      padding-top: 16px;
-    }
-
-    /* Change styles for span and cancel button on extra small screens */
-    @media screen and (max-width: 300px) {
-      span.psw {
-        display: block;
-        float: none;
-      }
-
-      
-    }
-
-    .form-control{
-      width:50%
-    }
-  </style>
-
-</head>
-
-<body>
-  <!DOCTYPE html>
-
-<html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-  <style type="text/css">
-    .bs-example {
-      margin: 0px;
-
-    }
-    .bg-dark {
-    background-color: #212529!important;
+/*---------------------------------------*/
+/* Register Form */
+/*---------------------------------------*/
+body {
+  background:linear-gradient(to right, #78a7ba 0%, #385D6C 50%, #78a7ba 99%);
 }
-    .navbar-brand {
-      font-size: 20px;
-      font-family: monospace;
-      
-    }
 
-    .form-control{
-      width:50%
-    }
+.signup-form {
+  font-family: "Roboto", sans-serif;
+  width:650px;
+  margin:30px auto;
+  background:linear-gradient(to right, #ffffff 0%, #fafafa 50%, #ffffff 99%);
+  border-radius: 10px;
+}
 
-    .bttn{
-      width: 50%;
-    }
-  </style>
-</head>
+/*---------------------------------------*/
+/* Form Header */
+/*---------------------------------------*/
+.form-header  {
+  background-color: #EFF0F1;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
 
-<body>
+.form-header h1 {
+  font-size: 30px;
+  text-align:center;
+  color:#666;
+  padding:20px 0;
+  border-bottom:1px solid #cccccc;
+}
+
+/*---------------------------------------*/
+/* Form Body */
+/*---------------------------------------*/
+.form-body {
+  padding:10px 40px;
+  color:#666;
+}
+
+.form-group{
+  margin-bottom:20px;
+}
+
+.form-body .label-title {
+  color:#1BBA93;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.form-body .form-input {
+    font-size: 17px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 34px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #333333;
+    text-align: left;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+    background: white;
+    outline: none;
+}
 
 
 
-  <div class="bs-example">
-    <nav class="navbar navbar-expand-md  navbar-dark fixed-top" style="background-color: #000000;">
-    <a style="color: #ffffff;text-decoration: none; " href="/"><font size =" 4">Medical Chatbot System</font><br /></a>  
-      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+.horizontal-group .left{
+  float:left;
+  width:49%;
+}
 
-      <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-        <div class="navbar-nav">
-          <p style="
-          padding-left: 15px;
-      "  class="nav-item nav-link active"></p>
+.horizontal-group .right{
+  float:right;
+  width:49%;
+}
 
-          
+input[type="file"] {
+  outline: none;
+  cursor:pointer;
+  font-size: 17px;
+}
+
+#range-label {
+  width:15%;
+  padding:5px;
+  background-color: #1BBA93;
+  color:white;
+  border-radius: 5px;
+  font-size: 17px;
+  position: relative;
+  top:-8px;
+}
 
 
+::-webkit-input-placeholder  {
+  color:#d9d9d9;
+}
+
+/*---------------------------------------*/
+/* Form Footer */
+/*---------------------------------------*/
+
+
+
+.btn {
+   display:inline-block;
+   padding:10px 20px;
+   background-color: #1BBA93;
+   font-size:17px;
+   border:none;
+   border-radius:5px;
+   color:#bcf5e7;
+   cursor:pointer;
+   
+}
+
+.btn:hover {
+  background-color: #169c7b;
+  color:white;
+}
+nav{
+  position: fixed;
+  background: #1b1b1b;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 12;
+  top:0;
+  left:0;
+}
+nav .menu{
+  max-width: 1250px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.menu .logo a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+.menu ul{
+  display: inline-flex;
+}
+.menu ul li{
+  list-style: none;
+  margin-left: 7px;
+}
+.menu ul li:first-child{
+  margin-left: 0px;
+}
+.menu ul li a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.menu ul li a:hover{
+  background: #fff;
+  color: black;
+}
+
+
+    </style>
+  </head>
+  <body >
+    <nav>
+        <div class="menu">
+          <div class="logo">
+            <a href="./home">Medical Chatbot</a>
+          </div>
+          <ul>
+            <li><a href="./customersignup">Sign Up</a></li>
+            <li><a href="aboutus">About</a></li>
+            
+          </ul>
         </div>
-
-        <div class="navbar-nav">
-          <a href="/customer/customersignup" class="nav-item nav-link">Register</a>
-          <a href="/adminlogin" class="nav-item nav-link">Login</a>
-          <a href="/customer/doctor_signup" class="nav-item nav-link">Doctor Register</a>
-          <a href="/aboutus" class="nav-item nav-link">About Us</a>
-          
-        </div>
-
-
-
-
+      </nav>
+      <br><br>
+      <br><br>
+      <br><br>
+      <div class="bgimage">
+        
       </div>
-    </nav>
-  </div>
+    <form class="signup-form" method="POST" autocomplete="off" enctype="multipart/form-data">
+        {% csrf_token %}
 
+      <!-- form header -->
+      <div class="form-header">
+        <h1>Login</h1>
+      </div>
 
+      <!-- form body -->
+      <div class="form-body">
 
+        <!-- Firstname and Lastname -->
+        <div class="horizontal-group">
+            <div class="form-group center">
+                <label for="username" class="label-title">Username *</label>
+                {% render_field form.username class="form-input" placeholder="Username" autocomplete="off" %}
 
+              </div>
+        
+        <!-- Passwrod and confirm password -->
+        <div class="horizontal-group">
+          <div class="form-group center">
+            <label for="password" class="label-title">Password </label>
+            {% render_field form.password class="form-input" placeholder="Password"  %}
+          </div>
+        </div>
 
-  <br><br>
-  <br>
-
-
-  <div class="log-form">
-    <h2 class="text-center">Login to <span style = "color: slateblue;">Medical Chatbot</span></h2><br>
-    <form method="post">
-      <input type="hidden" name="csrfmiddlewaretoken" value="ddIjVKRMZzgQMJ05u5PpHXcVvH3C819uEetUCnGxnWkJNSHIHhpCZny79CMFaqIt">
-      <input type="text" name="username" autofocus autocapitalize="none" autocomplete="off" maxlength="150" placeholder="Username" class="form-control" required id="id_username">
-      <br>
-      <input type="password" name="password" autocomplete="current-password" placeholder="Password" class="form-control" required id="id_password">
-      <br>
-      <button type="submit" class="bttn">Login<br></button>
-
+      <!-- form-footer -->
+      <div class="form-footer">
+        <button type="reset" class="btn">Reset</button>
+        <button type="submit" class="btn">Login</button> 
+      </div>
     </form>
-  </div>
-  <!--end log form -->
 
-
-
-  
-</body>
-
+  </body>
 </html>

@@ -58,7 +58,7 @@
     }
 
     .sidebar {
-      background: #2f323a;
+      background: #66CDAA;
       margin-top: 70px;
       padding-top: 30px;
       position: fixed;
@@ -70,6 +70,7 @@
     }
 
     .sidebar .profile_image {
+      
       width: 100px;
       height: 100px;
       border-radius: 100px;
@@ -139,10 +140,11 @@
 
     .content {
       margin-left: 250px;
-      background: url(background.png) no-repeat;
+
+      background: url("{% static 'image/home.png'%}") no-repeat;
       background-position: center;
       background-size: cover;
-      height: 100vh;
+      height: 700px;
       transition: 0.5s;
     }
 
@@ -152,6 +154,14 @@
 
     #check {
       display: none;
+    }
+    .fa{
+      color:#22242A
+    }
+    h4{
+      text-align: center;
+      margin-top: 20px;
+      padding-top: 20px;
     }
   </style>
 
@@ -179,28 +189,36 @@
   <!--header area end-->
   <!--sidebar start-->
   <div class="sidebar" style="margin-top:60px;">
-    <center>
-
-      <img src="{% static customer.profile_pic.url %}" class="profile_image" alt="">
-      <h4><span style="color: cyan;font-weight:bold">Hi,</span> {{request.user.first_name}}</h4>
-      <h6 style="color: rgb(255, 255, 255);">( User )</h6>
-
-    </center>
+   
 
     {% if dashboard == True %}
+    <center>
+      <img src="{% static customer.profile_pic.url %}" class="profile_image" alt="">
+      <h4 style="color: rgb(3, 3, 3);font-weight:bold"><span >Hi,</span> {{request.user.first_name}}</h4>
+     
+      <br>
+    </center>
+    
       <a class="si" href="/customer/customer-dashboard"><i class="fa fa-user fa-2x "></i><span>Dashboard</span></a>
       <a href="/customer/engm"><i class="fa fa-language fa-2x"></i><span>Marathi Voice </span></a>
       <a href="/customer/engh"><i class="fa fa-language fa-2x"></i><span>Hindi Voice</span></a>
       <a href="/customer/eng"><i class="fa fa-language fa-2x"></i><span>English Chatbot</span></a>
     
       {% elif marathi == True %}
+     
+      <h4 style="color: rgb(3, 3, 3);font-weight:bold"><span >Hi,</span> {{request.user.first_name}}</h4>
+     
+      <br>
 
-      <a href="/customer/customer-dashboard"><i class="fa fa-user fa-2x"></i><span>Dashboard</span></a>
+        <a href="/customer/customer-dashboard"><i class="fa fa-user fa-2x"></i><span>Dashboard</span></a>
       <a class="si" href="/customer/engm"><i class="fa fa-language fa-2x"></i><span>Marathi Voice </span></a>
       <a href="/customer/engh"><i class="fa fa-language fa-2x"></i><span>Hindi Voice</span></a>
       <a href="/customer/eng"><i class="fa fa-language fa-2x"></i><span>English Chatbot</span></a>
     
       {% elif hindi == True %}
+      <h4 style="color: rgb(3, 3, 3);font-weight:bold"><span >Hi,</span> {{request.user.first_name}}</h4>
+     
+      <br>
 
       <a href="/customer/customer-dashboard"><i class="fa fa-user fa-2x"></i><span>Dashboard</span></a>
       <a  href="/customer/engm"><i class="fa fa-language fa-2x"></i><span>Marathi Voice </span></a>
@@ -208,6 +226,9 @@
       <a href="/customer/eng"><i class="fa fa-language fa-2x"></i><span>English Chatbot</span></a>
     
       {% elif english == True %}
+      <h4 style="color: rgb(3, 3, 3);font-weight:bold"><span >Hi,</span> {{request.user.first_name}}</h4>
+     
+      <br>
 
       <a href="/customer/customer-dashboard"><i class="fa fa-user fa-2x"></i><span>Dashboard</span></a>
       <a  href="/customer/engm"><i class="fa fa-language fa-2x"></i><span>Marathi Voice </span></a>
